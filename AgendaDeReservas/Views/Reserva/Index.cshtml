@@ -3,3 +3,15 @@
 <h1>Lista de Reservas</h1>
 
 <p>Total de reservas: @Model.Count</p>
+
+<ul>
+    @foreach(var reserva in Model)
+    {
+        <li>
+            <strong>Cliente:</strong> @reserva.NomeCliente <br />
+            <strong>Telefone:</strong> @reserva.Telefone <br />
+            <strong>Evento:</strong> @reserva.TipoDeEvento <br />
+            <strong>Horário:</strong> @reserva.Horario
+        </li>
+    }  
+</ul> 
