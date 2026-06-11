@@ -11,9 +11,9 @@ namespace AgendaDeReservas.Models
             {
                 Id = 1,
                 NomeCliente = "Karen Rocha",
-                Telefone = "991782199",
+                Telefone = 991782199,
                 DataReserva = DateTime.Parse("2026-10-27"),
-                TipoEvento = "Aniversário",
+                TipoDeEvento = "Aniversário",
                 Observacao = "50 pessoas",
                 Horario = "12:00"
             },
@@ -22,9 +22,9 @@ namespace AgendaDeReservas.Models
             {
                 Id = 2,
                 NomeCliente = "Kauany Brigagão",
-                Telefone = "993056052",
+                Telefone = 993056052,
                 DataReserva = DateTime.Parse("2026-10-28"),
-                TipoEvento = "Aniversário",
+                TipoDeEvento = "Aniversário",
                 Observacao = "100 pessoas",
                 Horario = "20:00"
             }
