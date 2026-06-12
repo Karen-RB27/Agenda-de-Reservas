@@ -37,4 +37,10 @@ public class ReservaController : Controller
         ListaReserva.Delete(id);
         return RedirectToAction("Index");
     }
+
+    public IActionResult Edit(int id)
+    {
+    return Content($"Recebi o ID {id}");
+    }
 }
+    

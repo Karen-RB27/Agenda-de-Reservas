@@ -46,5 +46,10 @@ namespace AgendaDeReservas.Models
                 reservas.Remove(reserva);
             }
         }
+
+        public static Reserva? BuscarPorId (int id)
+        {
+            return reservas.Find(r => r.Id == id);
+        }
     }
 }
