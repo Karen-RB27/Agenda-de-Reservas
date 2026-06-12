@@ -17,13 +17,13 @@ public class ReservaController : Controller
     }
 
     [HttpPost]
-    public IActionResult Create(string NomeCliente)
+    public IActionResult Create(string NomeCliente, int Telefone)
     {
        var novaReserva = new Reserva
        {
-              Id = 3,
+              Id = ListaReserva.ObterTodas().Count +1,
               NomeCliente = NomeCliente,
-              Telefone = 0,
+              Telefone = Telefone,
               DataReserva = DateTime.Now,
               TipoDeEvento = "",
               Observacao = "",
