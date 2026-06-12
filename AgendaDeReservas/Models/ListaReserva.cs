@@ -34,5 +34,10 @@ namespace AgendaDeReservas.Models
         {
             return reservas;
         }
+
+        public static void Add (Reserva reserva)
+        {
+            reservas.Add(reserva);
+        }
     }
 }

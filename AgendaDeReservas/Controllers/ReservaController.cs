@@ -19,6 +19,17 @@ public class ReservaController : Controller
     [HttpPost]
     public IActionResult Create(string NomeCliente)
     {
-        return Content($"Cliente recebido: {NomeCliente}");
+       var novaReserva = new Reserva
+       {
+              Id = 3,
+              NomeCliente = NomeCliente,
+              Telefone = 0,
+              DataReserva = DateTime.Now,
+              TipoDeEvento = "",
+              Observacao = "",
+              Horario = ""
+       };
+             ListaReserva.Add(novaReserva);
+             return RedirectToAction("Index");
     }
 }
