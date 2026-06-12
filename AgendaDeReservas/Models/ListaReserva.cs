@@ -37,5 +37,14 @@ namespace AgendaDeReservas.Models
         {
             reservas.Add(reserva);
         }
+
+        public static void Delete (int id)
+        {
+            var reserva = reservas.Find(r => r.Id == id);
+            if (reserva != null)
+            {
+                reservas.Remove(reserva);
+            }
+        }
     }
 }

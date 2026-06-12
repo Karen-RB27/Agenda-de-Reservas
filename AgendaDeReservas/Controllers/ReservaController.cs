@@ -31,4 +31,10 @@ public class ReservaController : Controller
              ListaReserva.Add(novaReserva);
              return RedirectToAction("Index");
     }
+
+    public IActionResult Delete (int id)
+    {
+        ListaReserva.Delete(id);
+        return RedirectToAction("Index");
+    }
 }
