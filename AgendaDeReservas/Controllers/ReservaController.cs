@@ -15,4 +15,10 @@ public class ReservaController : Controller
     {
         return View();
     }
+
+    [HttpPost]
+    public IActionResult Create(string NomeCliente)
+    {
+        return Content($"Cliente recebido: {NomeCliente}");
+    }
 }
