@@ -27,7 +27,6 @@ public class ReservaController : Controller
               DataReserva = DateTime.Now,
               TipoDeEvento = "",
               Observacao = "",
-              Horario = ""
        };
              ListaReserva.Add(novaReserva);
              return RedirectToAction("Index");

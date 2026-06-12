@@ -15,7 +15,6 @@ namespace AgendaDeReservas.Models
                 DataReserva = DateTime.Parse("2026-10-27"),
                 TipoDeEvento = "Aniversário",
                 Observacao = "50 pessoas",
-                Horario = "12:00"
             },
 
             new Reserva
@@ -26,7 +25,6 @@ namespace AgendaDeReservas.Models
                 DataReserva = DateTime.Parse("2026-10-28"),
                 TipoDeEvento = "Aniversário",
                 Observacao = "100 pessoas",
-                Horario = "20:00"
             }
         };
 

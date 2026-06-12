@@ -9,7 +9,6 @@ namespace AgendaDeReservas.Models
         public DateTime DataReserva { get; set; }
         public string TipoDeEvento { get; set; }
         public string Observacao { get; set; }
-        public string Horario { get; set; }
         
     }
 }
