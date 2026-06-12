@@ -11,4 +11,8 @@ public class ReservaController : Controller
        var reservas = ListaReserva.ObterTodas();
        return View(reservas);
    }
+    public IActionResult Create ()
+    {
+        return View();
+    }
 }
