@@ -38,9 +38,9 @@ public class ReservaController : Controller
         return RedirectToAction("Index");
     }
 
-    public IActionResult Edit(int id)
+   public IActionResult Edit(int id)
     {
-    return Content($"Recebi o ID {id}");
+    throw new Exception("TESTE EDIT");
     }
 }
     
