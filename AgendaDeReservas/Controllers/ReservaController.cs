@@ -40,7 +40,7 @@ public class ReservaController : Controller
 
    public IActionResult Edit(int id)
     {
-    throw new Exception("TESTE EDIT");
+        return Content($"Recebi o ID {id}");
     }
 }
     
