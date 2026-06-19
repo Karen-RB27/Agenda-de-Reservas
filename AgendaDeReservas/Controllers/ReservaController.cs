@@ -41,6 +41,11 @@ public class ReservaController : Controller
    public IActionResult Edit(int id)
     {
         var reserva = ListaReserva.BuscarPorId(id);
+
+        if (reserva == null)
+        {
+            return Content("Reserva não encontrada");
+        }
         return View(reserva);
     }
 }
