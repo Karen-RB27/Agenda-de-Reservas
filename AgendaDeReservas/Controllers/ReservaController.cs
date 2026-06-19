@@ -40,7 +40,8 @@ public class ReservaController : Controller
 
    public IActionResult Edit(int id)
     {
-        return Content($"Recebi o ID {id}");
+        var reserva = ListaReserva.BuscarPorId(id);
+        return View(reserva);
     }
 }
     
