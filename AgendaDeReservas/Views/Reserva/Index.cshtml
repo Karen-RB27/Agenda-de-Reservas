@@ -1,23 +1,38 @@
 @model List<AgendaDeReservas.Models.Reserva>
 
-<h1>Lista de Reservas</h1>
+<h1>Agenda de Reservas</h1>
 
-<p>Total de reservas: @Model.Count</p>
+<p>Total de reservas: <strong >@Model.Count</strong></p>
 
-<ul>
-    @foreach(var reserva in Model)
-    {
-        <li>
-            <strong>Cliente:</strong> @reserva.NomeCliente <br />
-            <strong>Telefone:</strong> @reserva.Telefone <br />
-            <strong>Evento:</strong> @reserva.TipoDeEvento <br />
-            <strong>Observações:</strong> @reserva.Observacao <br />
-            <strong>Data da Reserva:</strong> @reserva.DataReserva <br />
+<p>
+    <a href="/Reserva/Create">Nova Reserva</a>
+</p>
 
-            <a href="/Reserva/Delete/@reserva.Id">Excluir</a>
-            <a href="/Reserva/Edit/@reserva.Id">Editar</a>
-
-        </li>
-         <br />
-    }  
-</ul> 
+<table border="1" cellpadding="10" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Cliente</th>
+            <th>Telefone</th>
+            <th>Evento</th>
+            <th>Observações</th>
+            <th>Data da Reserva</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var reserva in Model)
+        {
+            <tr>
+                <td>@reserva.NomeCliente</td>
+                <td>@reserva.Telefone</td>
+                <td>@reserva.TipoDeEvento</td>
+                <td>@reserva.Observacao</td>
+                <td>@reserva.DataReserva.ToString("dd/MM/yyyy")</td>
+                <td>
+                    <a href="/Reserva/Delete/@reserva.Id">Excluir</a>
+                    <a href="/Reserva/Edit/@reserva.Id">Editar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
