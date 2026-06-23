@@ -22,7 +22,7 @@
     <p>
        Data da Reserva:
        <br />
-    <input type="date" name="DataReserva" value="@Model.DataReserva.ToString" />
+    <input type="date" name="DataReserva" value="@Model.DataReserva.ToString("yyyy-MM-dd")" />
     </p>
 
 
@@ -43,9 +43,3 @@
     <button type="submit"> Salvar Alterações</button>
 
 </form>
-@functions {
-    private void WriteAttributeValue(string v1, int v2, Func<string> toString, int v3, int v4, bool v5)
-    {
-        throw new NotImplementedException();
-    }
-}
