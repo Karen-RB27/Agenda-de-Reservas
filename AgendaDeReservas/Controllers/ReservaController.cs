@@ -7,6 +7,7 @@ namespace AgendaDeReservas.Controllers;
 public class ReservaController : Controller
 {
     public string Observacao { get; private set; }
+    public string TipoDeEvento { get; private set; }
 
     public IActionResult Index()
    {
@@ -53,13 +54,17 @@ public class ReservaController : Controller
     }
 
     [HttpPost]
-    public IActionResult Edit(int Id, string NomeCliente, int Telefone)
+    public IActionResult Edit(int Id, string NomeCliente, int Telefone, DateTime dateTime)
     {
         var reservaAtualizada = new Reserva
         {
             Id = Id,
             NomeCliente = NomeCliente,
-            Telefone = Telefone
+            Telefone = Telefone,
+            DataReserva = dateTime,
+            TipoDeEvento = TipoDeEvento,
+            Observacao = Observacao
+
         };
 
         ListaReserva.Atualizar(reservaAtualizada);

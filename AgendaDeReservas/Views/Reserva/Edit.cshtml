@@ -5,18 +5,47 @@
 <form method="post">
     <input type="hidden" name="Id" value="@Model.Id" />
 
-    <label>Nome do Cliente:</label>
-    <input type="text" name="NomeCliente" value="@Model.NomeCliente" required />
+    <p>
+       NomeCliente:
+       <br />
+    <input type="text" name="NomeCliente" value="@Model.NomeCliente" />
+    </p>
 
-    <br />
-    <br />
 
-    <label>Telefone:</label>
+     <p>
+       Telefone:
+       <br />
     <input type="number" name="Telefone" value="@Model.Telefone" />
+    </p>
 
-    <br />
-    <br />
+
+    <p>
+       Data da Reserva:
+       <br />
+    <input type="date" name="DataReserva" value="@Model.DataReserva.ToString" />
+    </p>
+
+
+    <p>
+       Tipo de Evento:
+       <br />
+    <input type="text" name="TipoEvento" value="@Model.TipoDeEvento" />
+    </p>
+
+
+    <p>
+       Observações:
+       <br />
+       <textarea name="Observacao">@Model.Observacao</textarea>
+    </p>
+
 
     <button type="submit"> Salvar Alterações</button>
 
 </form>
+@functions {
+    private void WriteAttributeValue(string v1, int v2, Func<string> toString, int v3, int v4, bool v5)
+    {
+        throw new NotImplementedException();
+    }
+}
