@@ -5,7 +5,7 @@
 <p>Total de reservas: <strong >@Model.Count</strong></p>
 
 <p>
-    <a href="/Reserva/Create">Nova Reserva</a>
+    <a href="/Reserva/Create" class="btn-novo">Nova Reserva</a>
 </p>
 
 <table border="1" cellpadding="10" cellspacing="0">
@@ -29,8 +29,8 @@
                 <td>@reserva.Observacao</td>
                 <td>@reserva.DataReserva.ToString("dd/MM/yyyy")</td>
                 <td>
-                    <a href="/Reserva/Delete/@reserva.Id">Excluir</a>
-                    <a href="/Reserva/Edit/@reserva.Id">Editar</a>
+                    <a class="btn-excluir" href="/Reserva/Delete/@reserva.Id">Excluir</a>
+                    <a class="btn-editar" href="/Reserva/Edit/@reserva.Id">Editar</a>
                 </td>
             </tr>
         }
