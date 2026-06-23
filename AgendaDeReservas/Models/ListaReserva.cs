@@ -59,6 +59,9 @@ namespace AgendaDeReservas.Models
             {
                 reserva.NomeCliente = reservaAtualizada.NomeCliente;
                 reserva.Telefone = reservaAtualizada.Telefone;
+                reserva.DataReserva = reservaAtualizada.DataReserva;
+                reserva.TipoDeEvento = reservaAtualizada.TipoDeEvento;
+                reserva.Observacao = reservaAtualizada.Observacao;
                 
             }
         }
