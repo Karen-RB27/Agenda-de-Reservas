@@ -6,6 +6,8 @@ namespace AgendaDeReservas.Controllers;
 
 public class ReservaController : Controller
 {
+    public string Observacao { get; private set; }
+
     public IActionResult Index()
    {
        var reservas = ListaReserva.ObterTodas();
@@ -17,19 +19,20 @@ public class ReservaController : Controller
     }
 
     [HttpPost]
-    public IActionResult Create(string NomeCliente, int Telefone)
+    public IActionResult Create(string NomeCliente, int Telefone, DateTime DataReserva, string TipoDeEvento, string Observacoes)
     {
-       var novaReserva = new Reserva
-       {
-              Id = ListaReserva.ObterTodas().Count +1,
-              NomeCliente = NomeCliente,
-              Telefone = Telefone,
-              DataReserva = DateTime.Now,
-              TipoDeEvento = "",
-              Observacao = "",
-       };
-             ListaReserva.Add(novaReserva);
-             return RedirectToAction("Index");
+        var novaReserva = new Reserva
+        {
+            Id = ListaReserva.ObterTodas().Count + 1,
+            NomeCliente = NomeCliente,
+            Telefone = Telefone,
+            DataReserva = DataReserva,
+            TipoDeEvento = TipoDeEvento,
+            Observacao = Observacoes
+        };
+
+        ListaReserva.Add(novaReserva);
+        return RedirectToAction("Index");
     }
 
     public IActionResult Delete (int id)

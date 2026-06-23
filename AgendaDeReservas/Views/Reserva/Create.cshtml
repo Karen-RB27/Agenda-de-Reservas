@@ -1,15 +1,40 @@
 <h1>Nova reserva</h1>
 
 <form method="post">
-    <label>Nome do cliente:</label>
-    <input type="text"  name="NomeCliente"/>
-    <label>Telefone:</label>
-    <input type="number" name="Telefone" />
 
-    <br />
-    <br />
+    <p>
+        Nome do Cliente: 
+        <br />
+        <input type="text" name="NomeCliente" />
+    </p>
+
+    <p>
+        Telefone: 
+        <br />
+        <input type="number" name="Telefone" />
+    </p>
+
+    <p>
+        Data da Reserva: 
+        <br />
+        <input type="date" name="DataReserva" />    
+    </p>
+
+    <p>
+        Tipo de Evento: 
+        <br />
+        <input type="text" name="TipoDeEvento" />    
+    </p>
+
+    <p>
+        Observações: 
+        <br />
+        <input type="text" name="Observacoes" />    
+    </p>
+
 
     <button type="submit">Salvar</button>
+    <a href="/Reserva">Voltar</a>
 
 </form>
  
