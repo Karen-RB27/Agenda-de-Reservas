@@ -22,7 +22,6 @@ C:\Users\rocha\OneDrive\Desktop\AGENDA\Agenda-de-Reservas\AgendaDeReservas\obj\D
 C:\Users\rocha\OneDrive\Desktop\AGENDA\Agenda-de-Reservas\AgendaDeReservas\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\rocha\OneDrive\Desktop\AGENDA\Agenda-de-Reservas\AgendaDeReservas\obj\Debug\net10.0\scopedcss\bundle\AgendaDeReservas.styles.css
 C:\Users\rocha\OneDrive\Desktop\AGENDA\Agenda-de-Reservas\AgendaDeReservas\obj\Debug\net10.0\scopedcss\projectbundle\AgendaDeReservas.bundle.scp.css
-C:\Users\rocha\OneDrive\Desktop\AGENDA\Agenda-de-Reservas\AgendaDeReservas\obj\Debug\net10.0\compressed\jgv3rd39rb-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\rocha\OneDrive\Desktop\AGENDA\Agenda-de-Reservas\AgendaDeReservas\obj\Debug\net10.0\compressed\1o36zdgfls-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\rocha\OneDrive\Desktop\AGENDA\Agenda-de-Reservas\AgendaDeReservas\obj\Debug\net10.0\compressed\84t55ity4v-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\rocha\OneDrive\Desktop\AGENDA\Agenda-de-Reservas\AgendaDeReservas\obj\Debug\net10.0\compressed\133xanqwh3-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -96,3 +95,4 @@ C:\Users\rocha\OneDrive\Desktop\AGENDA\Agenda-de-Reservas\AgendaDeReservas\obj\D
 C:\Users\rocha\OneDrive\Desktop\AGENDA\Agenda-de-Reservas\AgendaDeReservas\obj\Debug\net10.0\AgendaDeReservas.pdb
 C:\Users\rocha\OneDrive\Desktop\AGENDA\Agenda-de-Reservas\AgendaDeReservas\obj\Debug\net10.0\AgendaDeReservas.genruntimeconfig.cache
 C:\Users\rocha\OneDrive\Desktop\AGENDA\Agenda-de-Reservas\AgendaDeReservas\obj\Debug\net10.0\ref\AgendaDeReservas.dll
+C:\Users\rocha\OneDrive\Desktop\AGENDA\Agenda-de-Reservas\AgendaDeReservas\obj\Debug\net10.0\compressed\jgv3rd39rb-{0}-m0wdlonc0x-m0wdlonc0x.gz
