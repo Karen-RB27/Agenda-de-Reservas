@@ -51,10 +51,19 @@ a {
 }
 
 .navbar {
-  background-color: #0d3b66 !important;
+    background-color: #0d3b66 !important;
 }
 
-.navlink,
 .navbar-brand {
-  color: white !important;
+    color: white !important;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #d6eaf8 !important;
 }
