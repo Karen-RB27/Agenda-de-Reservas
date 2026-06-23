@@ -67,3 +67,9 @@ a {
 .nav-link:hover {
     color: #d6eaf8 !important;
 }
+
+
+.logo {
+  height: 45px;
+  margin-right: 10px;
+}
