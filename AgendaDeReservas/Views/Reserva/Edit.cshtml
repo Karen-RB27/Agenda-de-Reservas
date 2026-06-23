@@ -2,6 +2,21 @@
 
 <h1>Editar Reserva...</h1>
 
-<p>ID: @Model.Id</p>
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
 
-<p>Cliente: @Model.NomeCliente</p>
+    <label>Nome do Cliente:</label>
+    <input type="text" name="NomeCliente" value="@Model.NomeCliente" required />
+
+    <br />
+    <br />
+
+    <label>Telefone:</label>
+    <input type="number" name="Telefone" value="@Model.Telefone" />
+
+    <br />
+    <br />
+
+    <button type="submit"> Salvar Alterações</button>
+
+</form>

@@ -48,5 +48,20 @@ public class ReservaController : Controller
         }
         return View(reserva);
     }
+
+    [HttpPost]
+    public IActionResult Edit(int Id, string NomeCliente, int Telefone)
+    {
+        var reservaAtualizada = new Reserva
+        {
+            Id = Id,
+            NomeCliente = NomeCliente,
+            Telefone = Telefone
+        };
+
+        ListaReserva.Atualizar(reservaAtualizada);
+        return RedirectToAction("Index");
+        
+    }
 }
     

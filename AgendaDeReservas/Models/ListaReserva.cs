@@ -51,5 +51,16 @@ namespace AgendaDeReservas.Models
         {
             return reservas.Find(r => r.Id == id);
         }
+
+        public static void Atualizar(Reserva reservaAtualizada)
+        {
+            var reserva = reservas.Find(r => r.Id == reservaAtualizada.Id);
+            if (reserva != null)
+            {
+                reserva.NomeCliente = reservaAtualizada.NomeCliente;
+                reserva.Telefone = reservaAtualizada.Telefone;
+                
+            }
+        }
     }
 }
