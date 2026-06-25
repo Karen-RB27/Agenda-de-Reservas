@@ -41,7 +41,8 @@ public class ReservaController : Controller
             Observacao = Observacoes
         };
 
-        ListaReserva.Add(novaReserva);
+        _context.Reservas.Add(novaReserva);
+        _context.SaveChanges();
         return RedirectToAction("Index");
     }
 
@@ -53,7 +54,7 @@ public class ReservaController : Controller
 
    public IActionResult Edit(int id)
     {
-        var reserva = ListaReserva.BuscarPorId(id);
+        var reserva = _context.Reservas.Find(id);
 
         if (reserva == null)
         {
@@ -65,18 +66,19 @@ public class ReservaController : Controller
     [HttpPost]
     public IActionResult Edit(int Id, string NomeCliente, int Telefone, DateTime dateTime)
     {
-        var reservaAtualizada = new Reserva
+        var reservaAtualizada = _context.Reservas.Find(Id);
+        if (reservaAtualizada == null)
         {
-            Id = Id,
-            NomeCliente = NomeCliente,
-            Telefone = Telefone,
-            DataReserva = dateTime,
-            TipoDeEvento = TipoDeEvento,
-            Observacao = Observacao
+            return Content("Reserva não encontrada");
+        }
+        
+        reservaAtualizada.NomeCliente = NomeCliente;
+        reservaAtualizada.Telefone = Telefone;
+        reservaAtualizada.DataReserva = dateTime;
+        reservaAtualizada.TipoDeEvento = TipoDeEvento;
+        reservaAtualizada.Observacao = Observacao;
 
-        };
-
-        ListaReserva.Atualizar(reservaAtualizada);
+        _context.SaveChanges();
         return RedirectToAction("Index");
         
     }
