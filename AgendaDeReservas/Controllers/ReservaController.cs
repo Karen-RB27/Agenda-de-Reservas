@@ -1,17 +1,26 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using AgendaDeReservas.Models;
+using AgendaDeReservas.DATA;
+using Microsoft.EntityFrameworkCore;
 
 namespace AgendaDeReservas.Controllers;
 
 public class ReservaController : Controller
 {
+    private readonly AppDbContext _context;
+
+    public ReservaController(AppDbContext context)
+    {
+        _context = context;
+    }
+
     public string Observacao { get; private set; }
     public string TipoDeEvento { get; private set; }
 
     public IActionResult Index()
    {
-       var reservas = ListaReserva.ObterTodas();
+       var reservas = _context.Reservas.ToList();
        return View(reservas);
    }
     public IActionResult Create ()
