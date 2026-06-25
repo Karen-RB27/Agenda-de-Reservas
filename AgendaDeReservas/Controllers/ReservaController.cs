@@ -64,23 +64,24 @@ public class ReservaController : Controller
     }
 
     [HttpPost]
-    public IActionResult Edit(int Id, string NomeCliente, int Telefone, DateTime dateTime)
+    public IActionResult Edit(int Id, string NomeCliente, int Telefone, DateTime DataReserva, string TipoDeEvento, string Observacao)
     {
-        var reservaAtualizada = _context.Reservas.Find(Id);
+       var reservaAtualizada = _context.Reservas.Find(Id);
+
         if (reservaAtualizada == null)
         {
             return Content("Reserva não encontrada");
         }
-        
+
         reservaAtualizada.NomeCliente = NomeCliente;
         reservaAtualizada.Telefone = Telefone;
-        reservaAtualizada.DataReserva = dateTime;
+        reservaAtualizada.DataReserva = DataReserva;
         reservaAtualizada.TipoDeEvento = TipoDeEvento;
         reservaAtualizada.Observacao = Observacao;
 
         _context.SaveChanges();
+
         return RedirectToAction("Index");
-        
     }
 }
     
