@@ -1,1 +1,30 @@
+@model AgendaDeReservas.Models.Usuario
+
 <h2>Login</h2>
+
+<form method="post">
+
+    <p>
+        E-mail:
+        <br />
+        <input type="email" name="Email" required />
+    </p>
+
+    <p>
+        Senha:
+        <br />
+        <input type="password" name="Senha" required />
+    </p>
+
+    <button type="submit" class="btn btn-success">
+        Entrar
+    </button>
+
+</form>
+
+@if (ViewBag.Mensagem != null)
+{
+    <p style="color:red;">
+        @ViewBag.Mensagem
+    </p>
+}

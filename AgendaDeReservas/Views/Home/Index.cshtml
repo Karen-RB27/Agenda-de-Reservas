@@ -1,17 +1,29 @@
 ﻿@{
-    ViewData["Title"] = "Início";
+    ViewData["Title"] = "Espaço Varandas";
 }
 
 <div class="text-center mt-5">
-    <h1 class="display-4">Bem-Vindo ao Espaço Varandas</h1>
+
+    <h1 class="display-4">Espaço Varandas</h1>
 
     <p class="lead">
-       Gerencie reservas de forma simples e organizada.
+        Gerencie as reservas do seu espaço de festas.
     </p>
 
-    <br />
+    <div class="mt-4">
 
-    <a href="/Reserva" class="btn-sucess btn-lg">
-       Ver Reservas!
-    </a>
+        <a asp-controller="Account"
+           asp-action="Login"
+           class="btn btn-success btn-lg me-2">
+            Entrar
+        </a>
+
+        <a asp-controller="Account"
+           asp-action="Cadastro"
+           class="btn btn-outline-success btn-lg">
+            Cadastrar
+        </a>
+
+    </div>
+
 </div>
