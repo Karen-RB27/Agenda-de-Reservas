@@ -17,11 +17,17 @@ public class ReservaController : Controller
         _context = context;
     }
 
-    public IActionResult Index()
-   {
-       var reservas = _context.Reservas.ToList();
-       return View(reservas);
-   }
+    public IActionResult Index(string pesquisa)
+    {
+        var reservas = _context.Reservas.AsQueryable();
+
+        if (!string.IsNullOrEmpty(pesquisa))
+        {
+            reservas = reservas.Where(r => r.NomeCliente.Contains(pesquisa));
+        }
+
+        return View(reservas.ToList());
+    }
     public IActionResult Create ()
     {
         return View();
