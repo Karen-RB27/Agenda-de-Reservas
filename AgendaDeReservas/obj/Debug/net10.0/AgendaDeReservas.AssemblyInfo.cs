@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AgendaDeReservas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb9090a198230ba675e3fad6fd15584f3d9d012c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d3111299f128c701acd511824a2b4cf83892e96")]
 [assembly: System.Reflection.AssemblyProductAttribute("AgendaDeReservas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AgendaDeReservas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
