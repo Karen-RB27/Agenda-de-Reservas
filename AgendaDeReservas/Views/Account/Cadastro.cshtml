@@ -1,1 +1,29 @@
+@model AgendaDeReservas.Models.Usuario
+
 <h2>Cadastro de Usuário</h2>
+
+<form method="post">
+
+    <p>
+        Nome:
+        <br />
+        <input type="text" name="Nome" required />
+    </p>
+
+    <p>
+        E-mail:
+        <br />
+        <input type="email" name="Email" required />
+    </p>
+
+    <p>
+        Senha:
+        <br />
+        <input type="password" name="Senha" required />
+    </p>
+
+    <button type="submit" class="btn btn-success">
+        Cadastrar
+    </button>
+
+</form>
