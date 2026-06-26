@@ -10,5 +10,7 @@ namespace AgendaDeReservas.DATA
         }
 
         public DbSet<Reserva> Reservas { get; set; }
+
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }

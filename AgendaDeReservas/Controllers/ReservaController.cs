@@ -10,13 +10,12 @@ public class ReservaController : Controller
 {
     private readonly AppDbContext _context;
 
+    public string Observacao { get; private set; }
+
     public ReservaController(AppDbContext context)
     {
         _context = context;
     }
-
-    public string Observacao { get; private set; }
-    public string TipoDeEvento { get; private set; }
 
     public IActionResult Index()
    {
@@ -33,12 +32,11 @@ public class ReservaController : Controller
     {
         var novaReserva = new Reserva
         {
-            Id = ListaReserva.ObterTodas().Count + 1,
             NomeCliente = NomeCliente,
             Telefone = Telefone,
             DataReserva = DataReserva,
             TipoDeEvento = TipoDeEvento,
-            Observacao = Observacoes
+            Observacao = Observacao
         };
 
         _context.Reservas.Add(novaReserva);
@@ -48,7 +46,15 @@ public class ReservaController : Controller
 
     public IActionResult Delete (int id)
     {
-        ListaReserva.Delete(id);
+        var reserva = _context.Reservas.Find(id);
+        if (reserva != null)
+        {
+            return NotFound();
+        }
+
+        _context.Reservas.Remove(reserva);
+        _context.SaveChanges();
+
         return RedirectToAction("Index");
     }
 
